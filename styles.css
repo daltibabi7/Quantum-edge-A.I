@@ -1,11 +1,12 @@
 /* Base Variables & Reset */
 :root {
-    --bg-dark: #0A0A0A;
-    --bg-card: #151515;
+    --bg-dark: #07090F;
+    --bg-card: #11141E;
     --text-main: #FFFFFF;
-    --text-muted: #A0A0A0;
-    --neon-blue: #00F0FF;
-    --neon-green: #00FF66;
+    --text-muted: #A0AABF;
+    --gold-primary: #D4AF37;
+    --gold-secondary: #E5C158;
+    --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -38,8 +39,8 @@ ul {
     padding: 0 20px;
 }
 
-.highlight { color: var(--neon-blue); }
-.highlight-green { color: var(--neon-green); }
+.highlight { color: var(--gold-primary); }
+.highlight-secondary { color: var(--gold-secondary); }
 
 /* Typography */
 h1, h2, h3 { font-weight: 700; line-height: 1.2; }
@@ -58,9 +59,10 @@ p { color: var(--text-muted); }
 }
 
 .btn-primary {
-    background: var(--neon-blue);
-    color: var(--bg-dark);
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    background: var(--gold-gradient);
+    color: #000;
+    border: none;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
 }
 .btn-primary:hover {
     box-shadow: 0 0 25px rgba(0, 240, 255, 0.7);
@@ -73,14 +75,14 @@ p { color: var(--text-muted); }
     border: 1px solid var(--text-muted);
 }
 .btn-secondary:hover {
-    border-color: var(--neon-blue);
-    color: var(--neon-blue);
+    border-color: var(--gold-primary);
+    color: var(--gold-primary);
 }
 
 .btn-outline {
     background: transparent;
-    border: 1px solid var(--neon-blue);
-    color: var(--neon-blue);
+    border: 1px solid var(--gold-primary);
+    color: var(--gold-primary);
 }
 .btn-outline:hover {
     background: rgba(0, 240, 255, 0.1);
@@ -105,19 +107,19 @@ p { color: var(--text-muted); }
     font-size: 1.5rem;
     font-weight: 700;
 }
-.logo span { color: var(--neon-blue); }
+.logo span { color: var(--gold-primary); }
 
 .nav a {
     margin: 0 15px;
     font-size: 0.9rem;
     transition: color 0.3s;
 }
-.nav a:hover { color: var(--neon-blue); }
+.nav a:hover { color: var(--gold-primary); }
 
 .btn-whatsapp {
     background: transparent;
-    color: var(--neon-green);
-    border: 1px solid var(--neon-green);
+    color: var(--gold-secondary);
+    border: 1px solid var(--gold-secondary);
     padding: 8px 20px;
     border-radius: 6px;
     font-weight: 600;
@@ -183,8 +185,8 @@ p { color: var(--text-muted); }
 /* Discount Banner */
 .discount-banner {
     background: linear-gradient(90deg, #0A0A0A, rgba(0, 255, 102, 0.1), #0A0A0A);
-    border-top: 1px solid var(--neon-green);
-    border-bottom: 1px solid var(--neon-green);
+    border-top: 1px solid var(--gold-secondary);
+    border-bottom: 1px solid var(--gold-secondary);
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 30px rgba(0, 255, 102, 0.15);
@@ -206,12 +208,13 @@ p { color: var(--text-muted); }
 }
 
 .btn-banner {
-    background: var(--neon-green);
+    background: var(--gold-gradient);
     color: #000;
     padding: 10px 24px;
     border-radius: 6px;
     font-weight: 700;
-    box-shadow: 0 0 15px rgba(0, 255, 102, 0.5);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    border: none;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .btn-banner:hover {
@@ -267,8 +270,8 @@ p { color: var(--text-muted); }
     width: 50px;
     height: 50px;
     background: rgba(0, 240, 255, 0.1);
-    color: var(--neon-blue);
-    border: 2px solid var(--neon-blue);
+    color: var(--gold-primary);
+    border: 2px solid var(--gold-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -301,7 +304,7 @@ p { color: var(--text-muted); }
 }
 
 .plan-card.classic {
-    border-color: var(--neon-blue);
+    border-color: var(--gold-primary);
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
     transform: scale(1.05);
     z-index: 10;
@@ -312,7 +315,7 @@ p { color: var(--text-muted); }
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--neon-blue);
+    background: var(--gold-primary);
     color: #000;
     padding: 5px 15px;
     border-radius: 20px;
@@ -321,14 +324,37 @@ p { color: var(--text-muted); }
 }
 
 .plan-card h3 { font-size: 1.5rem; margin-bottom: 20px; }
-.price { font-size: 2rem; font-weight: 700; margin-bottom: 5px; }
-.price .discounted { color: var(--neon-green); }
-.price .note { font-size: 0.9rem; font-weight: 400; color: var(--text-muted); }
-.price-alt { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 30px; }
+
+.price-tier {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.tier-main {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    text-decoration: line-through;
+    opacity: 0.7;
+    margin-bottom: 5px;
+}
+.tier-main .note {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+}
+.tier-discount {
+    font-size: 2rem;
+    color: var(--gold-primary);
+}
+.tier-discount .note {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
 
 .features-list { margin-bottom: 30px; text-align: left; }
 .features-list li { margin-bottom: 15px; display: flex; align-items: center; }
-.features-list li::before { content: '✓'; color: var(--neon-blue); margin-right: 10px; font-weight: bold; }
+.features-list li::before { content: '✓'; color: var(--gold-primary); margin-right: 10px; font-weight: bold; }
 .features-list li.disabled { color: #555; }
 .features-list li.disabled::before { content: '✕'; color: #555; }
 
@@ -357,7 +383,7 @@ p { color: var(--text-muted); }
 
 .payment-card .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
 .payment-card h3 { font-size: 1rem; }
-.payment-notice { font-style: italic; color: var(--neon-green); }
+.payment-notice { font-style: italic; color: var(--gold-secondary); }
 
 /* WhatsApp Support Section */
 .whatsapp-support {
@@ -368,7 +394,7 @@ p { color: var(--text-muted); }
     text-align: center;
 }
 
-.whatsapp-support h2 { margin-bottom: 10px; color: var(--neon-green); }
+.whatsapp-support h2 { margin-bottom: 10px; color: var(--gold-secondary); }
 .whatsapp-support p { margin-bottom: 30px; font-size: 1.2rem; }
 
 .btn-whatsapp-large {
@@ -427,7 +453,7 @@ p { color: var(--text-muted); }
     transition: background 0.3s;
 }
 .faq-question:hover { background: rgba(255, 255, 255, 0.02); }
-.faq-question .toggle { font-size: 1.5rem; color: var(--neon-blue); transition: transform 0.3s; }
+.faq-question .toggle { font-size: 1.5rem; color: var(--gold-primary); transition: transform 0.3s; }
 .faq-item.active .toggle { transform: rotate(45deg); }
 
 .faq-answer {
@@ -465,7 +491,7 @@ p { color: var(--text-muted); }
     color: var(--text-muted);
     transition: color 0.3s;
 }
-.footer-links a:hover, .footer-contact a:hover { color: var(--neon-blue); }
+.footer-links a:hover, .footer-contact a:hover { color: var(--gold-primary); }
 
 .social-icons { display: flex; gap: 15px; margin-top: 15px; }
 .social-icons a {
@@ -521,3 +547,4 @@ p { color: var(--text-muted); }
     .hero h1 { font-size: 2.5rem; }
     .header { padding: 15px 20px; }
 }
+
