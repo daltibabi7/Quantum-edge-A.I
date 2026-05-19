@@ -51,4 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.toggle('active');
         });
     });
+
+    // Model Limitations & Risk Disclaimer Toggle
+    const disclaimerHeader = document.querySelector('.disclaimer-header');
+    const disclaimerBox = document.querySelector('.disclaimer-box');
+    
+    if (disclaimerHeader && disclaimerBox) {
+        disclaimerHeader.addEventListener('click', () => {
+            disclaimerBox.classList.toggle('active');
+        });
+    }
 });

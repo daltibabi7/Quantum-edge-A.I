@@ -57,19 +57,20 @@
     </div>
 
     <!-- Partner Broker Section -->
-    <section class="partner-broker" id="partner" style="padding: 60px 0; background: rgba(255, 255, 255, 0.02); border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div class="container" style="text-align: center;">
-            <h2 style="margin-bottom: 20px;">Our Exclusive <span class="highlight">Partner Broker</span></h2>
-            <p style="margin-bottom: 40px; color: #a0a0b0; max-width: 600px; margin-left: auto; margin-right: auto;">We've partnered with Capital Xtend to provide you with the best trading conditions, tightest spreads, and fastest execution speeds for our AI signals.</p>
-            <div style="display: flex; justify-content: center;">
-                <div class="partner-card" style="max-width: 400px; width: 100%; padding: 40px; border-radius: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.3); backdrop-filter: blur(10px);">
-                    <img src="capital-xtend.png" alt="Capital Xtend Logo" style="max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.1);">
-                    <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; text-align: left;">
-                        <span style="font-size: 15px; color: #e0e0e0;"><span class="highlight" style="margin-right: 10px; font-weight: bold;">✓</span> Ultra-low Raw Spreads</span>
-                        <span style="font-size: 15px; color: #e0e0e0;"><span class="highlight" style="margin-right: 10px; font-weight: bold;">✓</span> Lightning Fast Execution</span>
-                        <span style="font-size: 15px; color: #e0e0e0;"><span class="highlight" style="margin-right: 10px; font-weight: bold;">✓</span> Fully Regulated & Secure</span>
+    <section class="partner-broker" id="partner">
+        <div class="container partner-container">
+            <h2>Our Exclusive <span class="highlight">Partner Broker</span></h2>
+            <p class="partner-description">We've partnered with Capital Xtend to provide you with the best trading conditions, tightest spreads, and fastest execution speeds for our AI signals.</p>
+            <div class="partner-card-wrapper">
+                <div class="partner-card">
+                    <img src="capital-xtend.png" alt="Capital Xtend Logo" class="partner-logo">
+                    <div class="partner-features">
+                        <span class="partner-feature-item"><span class="highlight partner-check">✓</span> Low Spread & Swap Free</span>
+                        <span class="partner-feature-item"><span class="highlight partner-check">✓</span> Unlimited Leverage Options</span>
+                        <span class="partner-feature-item"><span class="highlight partner-check">✓</span> Deposit & Cashback Bonus</span>
+                        <span class="partner-feature-item"><span class="highlight partner-check">✓</span> Regulated, Insured & Secure</span>
                     </div>
-                    <a href="#" class="btn btn-primary" style="width: 100%; display: block; box-sizing: border-box;">Open Account & Get 50% Off</a>
+                    <a href="#" class="btn btn-primary partner-btn">Open Account & Get 50% Off</a>
                 </div>
             </div>
         </div>
@@ -152,7 +153,7 @@
                 <div class="step">
                     <div class="step-number">5</div>
                     <h3>Turn on Auto Trading</h3>
-                    <p>(Loading) Let the AI execute trades for you! Also, you can use other 3rd party automated systems to trade the signals.</p>
+                    <p>Enable our Auto Trade Manager to automatically execute high-probability setups in real-time, or connect to your preferred third-party automated system.</p>
                 </div>
             </div>
         </div>
@@ -316,6 +317,36 @@
                 <div class="faq-item">
                     <div class="faq-question">What pairs does Quantum Edge AI cover? <span class="toggle">+</span></div>
                     <div class="faq-answer">The AI scans all major currency pairs (like EUR/USD, GBP/USD, USD/JPY) and a selection of high-liquidity minor pairs to find the highest probability setups.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Model Limitations & Risk Disclaimer -->
+    <section class="risk-disclaimer" id="disclaimer">
+        <div class="container">
+            <div class="disclaimer-box">
+                <div class="disclaimer-header">
+                    <span class="warning-icon">⚠</span>
+                    <h3>Trading Model Limitations & Risk Disclosure</h3>
+                    <span class="disclaimer-toggle">+</span>
+                </div>
+                <div class="disclaimer-content">
+                    <p>Trading financial instruments involves a substantial risk of capital loss and is not suitable for every investor. The trading model and signal parameters presented on this website are based on rigorous historical backtesting and probability-based analysis, but contain standard limitations that all users must understand:</p>
+                    <div class="disclaimer-grid">
+                        <div class="disclaimer-item">
+                            <h4>Market & Geopolitical Volatility</h4>
+                            <p>AI trading models are developed based on historical market trends. Unexpected geopolitical shifts, black swan events, or sudden monetary policy updates can render historical data ineffective and cause the model's accuracy to deviate.</p>
+                        </div>
+                        <div class="disclaimer-item">
+                            <h4>Execution Speed & Latency</h4>
+                            <p>Even with highly accurate signal output, latency, slippage, and platform connectivity can impact your actual trade fill price, meaning real results may differ from historical simulations.</p>
+                        </div>
+                        <div class="disclaimer-item">
+                            <h4>Prudent Risk Management</h4>
+                            <p>Past performance does not guarantee future results. There are no absolute guarantees of profitability. Never trade with capital that you cannot afford to lose, and ensure your account has proper risk controls.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

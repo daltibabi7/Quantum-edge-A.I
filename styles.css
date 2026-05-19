@@ -568,6 +568,204 @@ p { color: var(--text-muted); }
     background-color: var(--gold-primary);
 }
 
+/* Partner Broker Section */
+.partner-broker {
+    padding: 80px 0;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.partner-container {
+    text-align: center;
+}
+
+.partner-container h2 {
+    margin-bottom: 20px;
+}
+
+.partner-description {
+    margin-bottom: 40px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.05rem;
+}
+
+.partner-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-card {
+    max-width: 420px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 16px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold-primary);
+    box-shadow: 0 20px 45px rgba(212, 175, 55, 0.15);
+}
+
+.partner-logo {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+    padding: 10px;
+}
+
+.partner-features {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.partner-feature-item {
+    font-size: 1rem;
+    color: #E2E8F0;
+    display: flex;
+    align-items: center;
+}
+
+.partner-check {
+    margin-right: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.partner-btn {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Model Limitations & Risk Disclaimer Section */
+.risk-disclaimer {
+    padding: 80px 0;
+    background: #07090F;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.disclaimer-box {
+    background: rgba(17, 20, 30, 0.6);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.disclaimer-box.active {
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.08);
+}
+
+.disclaimer-header {
+    padding: 24px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.01);
+    transition: background 0.3s;
+}
+
+.disclaimer-header:hover {
+    background: rgba(212, 175, 55, 0.03);
+}
+
+.disclaimer-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+    flex: 1;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.warning-icon {
+    font-size: 1.5rem;
+    color: var(--gold-primary);
+    animation: pulseWarning 2s infinite;
+}
+
+.disclaimer-toggle {
+    font-size: 1.6rem;
+    color: var(--gold-primary);
+    transition: transform 0.3s ease;
+}
+
+.disclaimer-box.active .disclaimer-toggle {
+    transform: rotate(45deg);
+}
+
+.disclaimer-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 30px;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    border-top: 1px solid transparent;
+}
+
+.disclaimer-box.active .disclaimer-content {
+    max-height: 1000px;
+    padding: 24px 30px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.disclaimer-content > p {
+    margin-bottom: 25px;
+}
+
+.disclaimer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.disclaimer-item {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 3px solid var(--gold-primary);
+}
+
+.disclaimer-item h4 {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.disclaimer-item p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+@keyframes pulseWarning {
+    0% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
+    100% { opacity: 0.8; transform: scale(1); }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero { flex-direction: column; text-align: center; padding-top: 120px; }
@@ -610,9 +808,24 @@ p { color: var(--text-muted); }
         display: none;
     }
 }
+
 @media (max-width: 768px) {
     h2 { font-size: 2rem; }
     .hero h1 { font-size: 2.5rem; }
     .header { padding: 15px 20px; }
+    
+    .disclaimer-header {
+        padding: 20px;
+    }
+    .disclaimer-header h3 {
+        font-size: 1.1rem;
+        margin-left: 10px;
+    }
+    .disclaimer-content {
+        padding: 0 20px;
+    }
+    .disclaimer-box.active .disclaimer-content {
+        padding: 20px 20px 30px;
+    }
 }
 
