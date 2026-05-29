@@ -130,6 +130,30 @@ p { color: var(--text-muted); }
     box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
 }
 
+.header-ctas {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-login {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.btn-login:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-main);
+}
+
+.mobile-only {
+    display: none;
+}
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -458,6 +482,20 @@ p { color: var(--text-muted); }
 .payment-card:hover {
     transform: translateY(-5px);
     border-color: rgba(255, 255, 255, 0.2);
+}
+
+.payment-card.disabled-card {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: rgba(17, 20, 30, 0.4);
+    border-color: rgba(255, 255, 255, 0.02);
+}
+.payment-card.disabled-card .disabled-status {
+    color: var(--gold-secondary);
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: 500;
 }
 
 .payment-card .icon { font-size: 2rem; margin-bottom: 10px; display: block; }
@@ -925,8 +963,39 @@ p { color: var(--text-muted); }
         font-weight: 600;
     }
     
-    .btn-whatsapp {
+    .header-ctas {
         display: none;
+    }
+    
+    .mobile-only {
+        display: block;
+    }
+    
+    .nav .mobile-nav-login {
+        margin-top: 25px;
+        padding: 10px 24px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        font-size: 1.1rem;
+        width: 85%;
+        text-align: center;
+    }
+    .nav .mobile-nav-login:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .nav .mobile-nav-whatsapp {
+        margin-top: 12px;
+        padding: 10px 24px;
+        border: 1px solid var(--gold-secondary);
+        color: var(--gold-secondary);
+        border-radius: 6px;
+        font-size: 1.1rem;
+        width: 85%;
+        text-align: center;
+    }
+    .nav .mobile-nav-whatsapp:hover {
+        background: rgba(0, 255, 102, 0.1);
     }
 }
 
