@@ -754,11 +754,16 @@ p { color: var(--text-muted); }
 .partner-card-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .partner-card {
-    max-width: 420px;
+    flex: 1 1 380px;
+    max-width: 460px;
     width: 100%;
     padding: 40px;
     border-radius: 16px;
@@ -767,6 +772,11 @@ p { color: var(--text-muted); }
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-self: stretch;
 }
 
 .partner-card:hover {
@@ -775,14 +785,42 @@ p { color: var(--text-muted); }
     box-shadow: 0 20px 45px rgba(212, 175, 55, 0.15);
 }
 
-.partner-logo {
-    max-width: 80%;
-    height: auto;
-    border-radius: 12px;
+.partner-logo-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
+    width: 100%;
+}
+
+.partner-logo {
+    max-width: 85%;
+    max-height: 75px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     background: rgba(255, 255, 255, 0.02);
-    padding: 10px;
+    padding: 8px 16px;
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.weltrade-logo {
+    background: transparent;
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.15);
+    padding: 0;
+    overflow: hidden;
+    object-fit: cover;
+    height: 75px;
+    max-height: 75px;
+    width: 100%;
+    max-width: 260px;
 }
 
 .partner-features {
@@ -791,6 +829,7 @@ p { color: var(--text-muted); }
     gap: 18px;
     margin-bottom: 35px;
     text-align: left;
+    flex-grow: 1;
 }
 
 .partner-feature-item {
@@ -798,18 +837,23 @@ p { color: var(--text-muted); }
     color: #E2E8F0;
     display: flex;
     align-items: center;
+    line-height: 1.4;
+    min-height: 24px;
 }
 
 .partner-check {
     margin-right: 12px;
     font-weight: bold;
     font-size: 1.1rem;
+    flex-shrink: 0;
 }
 
 .partner-btn {
     width: 100%;
     display: block;
     box-sizing: border-box;
+    margin-top: auto;
+    padding: 14px 20px;
 }
 
 /* Model Limitations & Risk Disclaimer Section */
@@ -1016,6 +1060,10 @@ p { color: var(--text-muted); }
     }
     .disclaimer-box.active .disclaimer-content {
         padding: 20px 20px 30px;
+    }
+
+    .partner-card {
+        padding: 30px 20px;
     }
 }
 
